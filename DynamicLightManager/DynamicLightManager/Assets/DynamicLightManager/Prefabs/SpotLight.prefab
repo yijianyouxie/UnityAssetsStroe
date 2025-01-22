@@ -80,7 +80,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1384089775943214}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.03, y: -0.216, z: -2.049}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4492692107059096}
@@ -158,13 +158,14 @@ MonoBehaviour:
   showType: 0
   moveType: 1
   autoUpdateLightData: 1
+  effectCharacter: 0
   lightColor: {r: 1, g: 0.9044118, b: 0.9044118, a: 0}
   lightIntensity: 0.7
   lightRadius: 13
   spotAngle: 30
   glowNearClipDistance: 0
   glowDistance: 8
-  glowAlpha: 100
+  glowAlpha: 1
   textureList: []
   spriteFPS: 0
   textureIndex: 1

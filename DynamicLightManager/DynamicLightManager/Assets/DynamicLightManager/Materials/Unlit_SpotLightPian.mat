@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Unlit_SpotLightPian
-  m_Shader: {fileID: 4800000, guid: ca0085960660eb64db4720292107b026, type: 3}
+  m_Shader: {fileID: 4800000, guid: eaddadd69e9a5f24c850492d24eadaff, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -24,8 +24,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _AlphaScale: 0.41
+    - _DstBlend: 1
     - _GlowFlow: 0.296
     - _Scale1: 1
     - _Scale2: 0.13
     - _Speed: 0.2
+    - _SrcBlend: 1
     m_Colors: []
