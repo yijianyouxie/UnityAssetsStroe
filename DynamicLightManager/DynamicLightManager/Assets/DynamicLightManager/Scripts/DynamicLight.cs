@@ -70,7 +70,7 @@ namespace Games.Manager
         //[Range(0f, 10f)]
         //public float maxLightIntensity = 1f;
         [Header("光源的照亮半径")]
-        [Range(0f, 40f)]
+        [Range(0f, 50f)]
         public float lightRadius = 5f;
 
         [Header("射灯的广角大小;点光源用不到")]

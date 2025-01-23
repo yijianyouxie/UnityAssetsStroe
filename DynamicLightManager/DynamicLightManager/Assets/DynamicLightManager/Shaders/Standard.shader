@@ -55,7 +55,7 @@
 				UNITY_OPAQUE_ALPHA(col.a);
 				col = col * _Color;
 				col.rgb = GetDynamicPointLightColor(col.rgb, i.worldPos, i.worldNormal);
-				return col * _Color;
+				return col;
 			}
 			ENDCG
 		}
