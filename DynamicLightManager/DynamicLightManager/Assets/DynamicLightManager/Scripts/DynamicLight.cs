@@ -10,11 +10,11 @@ namespace Games.Manager
         public int LightIndex = -1;
         public enum LightType
         {
-            POINT,
+            //POINT,
             SPOT,
-            POINT_NOFADE,
-            CYLINDER,
-            SPOT_SKY,//专门照天空的,其余类型是照除了天空之外的对象
+            //POINT_NOFADE,
+            //CYLINDER,
+            //SPOT_SKY,//专门照天空的,其余类型是照除了天空之外的对象
         }
         [SerializeField]
         private LightType _lightType = LightType.SPOT;
@@ -24,16 +24,16 @@ namespace Games.Manager
             set
             {
                 _lightType = value;
-                if (_lightType == LightType.SPOT_SKY)
-                {
-                    noCulling = true;
+                //if (_lightType == LightType.SPOT_SKY)
+                //{
+                //    noCulling = true;
 
-                    FindSky();
-                }
-                else
-                {
+                //    FindSky();
+                //}
+                //else
+                //{
                     noCulling = false;
-                }
+                //}
             }
         }
         [SerializeField]
@@ -198,12 +198,12 @@ namespace Games.Manager
                 materialPropertyBlock = DynamicLightManager.materialPropertyBlock;
             }
 
-            if(lightType == LightType.SPOT_SKY)
-            {
-                noCulling = true;
+            //if(lightType == LightType.SPOT_SKY)
+            //{
+            //    noCulling = true;
 
-                FindSky();
-            }
+            //    FindSky();
+            //}
             Font.textureRebuilt += UpdateDynaimicLightText;
             UpdateData();
         }
@@ -245,11 +245,11 @@ namespace Games.Manager
                 }
                 lastSpotText = _spotText;
             }
-            if(_lightType == LightType.SPOT_SKY)
-            {
-                noCulling = true;
-                FindSky();
-            }
+            //if(_lightType == LightType.SPOT_SKY)
+            //{
+            //    noCulling = true;
+            //    FindSky();
+            //}
 
             UpdateData();
         }
@@ -304,7 +304,7 @@ namespace Games.Manager
                 return;
             }
 
-            if (_lightType == DynamicLight.LightType.SPOT || _lightType == LightType.SPOT_SKY)
+            if (_lightType == DynamicLight.LightType.SPOT /*|| _lightType == LightType.SPOT_SKY*/)
             {
                 if (null != spotRenderer)
                 {
@@ -399,12 +399,13 @@ namespace Games.Manager
 
         private void OnDrawGizmos()
         {
-            if(_lightType == LightType.POINT || _lightType == LightType.POINT_NOFADE)
-            {
-                Gizmos.color = Color.green;
-                Gizmos.DrawWireSphere(trs.position, lightRadius);
-            }
-            else if(_lightType == LightType.SPOT || _lightType == LightType.SPOT_SKY)
+            //if(_lightType == LightType.POINT || _lightType == LightType.POINT_NOFADE)
+            //{
+            //    Gizmos.color = Color.green;
+            //    Gizmos.DrawWireSphere(trs.position, lightRadius);
+            //}
+            //else 
+            if(_lightType == LightType.SPOT /*|| _lightType == LightType.SPOT_SKY*/)
             {
                 Gizmos.color = Color.green;
                 Matrix4x4 matrix = Gizmos.matrix;
@@ -423,10 +424,10 @@ namespace Games.Manager
                 Gizmos.color = Color.yellow;
                 Gizmos.DrawLine(trs.position, trs.position + 2 * trs.right);
             }
-            else if(_lightType == LightType.CYLINDER)
-            {
-                //Gizmos.dr
-            }
+            //else if(_lightType == LightType.CYLINDER)
+            //{
+            //    //Gizmos.dr
+            //}
         }
     }
 }

@@ -844,7 +844,7 @@ namespace Games.Manager
                 UnityEngine.Profiling.Profiler.BeginSample("====DynamicLightManager,UpdateLocalLight2_3");
 #endif
                 //开始计算灯光对动态物体的影响
-                if(dpl.lightType != DynamicLight.LightType.SPOT_SKY && dpl.effectCharacter)
+                if(/*dpl.lightType != DynamicLight.LightType.SPOT_SKY && */dpl.effectCharacter)
                 {
                     //to do
                 }
