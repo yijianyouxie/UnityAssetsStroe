@@ -1,0 +1,2 @@
+You can view the DemoScene.unity scene in the yijianyouxie\DynamicLightManager\Scenes folder to see the demo.
+After opening the Demo Scene, you can see a demo of the dynamic lighting displayed in the resource pack. It contains projection pictures, projection text and so on.
